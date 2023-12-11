@@ -1,0 +1,69 @@
+\documentclass[border=5mm, convert]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+    [
+        level 1/.style = {sibling distance = 5cm, level distance = 2.3cm},
+        level 2/.style = {sibling distance = 1.5cm, level distance = 2.3cm}
+    ]
+
+        \node[draw, circle] {}
+        child {
+            node[draw, rounded corners] {\texttt{0}}
+            edge from parent node [above] {\texttt{\#act\$}}
+        }
+        child {
+            node[draw, rounded corners] {\texttt{1}}
+            edge from parent node [above] {\texttt{\$}}
+        }
+        child {
+            node[draw, circle] {}
+            child {
+                node[draw, rounded corners] {\texttt{0}}
+                edge from parent node [left] {\texttt{acgt\#act\$}}
+            }
+            child {
+                node[draw, rounded corners] {\texttt{0}}
+                edge from parent node [right, rotate=-90, xshift=-20pt, yshift=5pt] {\texttt{gt\#act\$}}
+            }
+            child {
+                node[draw, rounded corners] {\texttt{1}}
+                edge from parent node [right] {\texttt{t\$}}
+            }
+            edge from parent node [below] {\texttt{ac}}
+        }
+        child {
+            node[draw, circle] {}
+            child {
+                node[draw, rounded corners] {\texttt{0}}
+                edge from parent node [left] {\texttt{acgt\#act\$}}
+            }
+            child {
+                node[draw, rounded corners] {\texttt{0}}
+                edge from parent node [right, rotate=-90, xshift=-20pt, yshift=5pt] {\texttt{gt\#act\$}}
+            }
+            child {
+                node[draw, rounded corners] {\texttt{1}}
+                edge from parent node [right] {\texttt{t\$}}
+            }
+            edge from parent node [right] {\texttt{c}}
+        }
+        child {
+            node[draw, rounded corners] {\texttt{0}}
+            edge from parent node [below] {\texttt{gt\#act\$}}
+        }
+        child {
+            node[draw, circle] {}
+            child {
+                node[draw, rounded corners] {\texttt{0}}
+                edge from parent node [left] {\texttt{\#act\$}}
+            }
+            child {
+                node[draw, rounded corners] {\texttt{1}}
+                edge from parent node [right] {\texttt{\$}}
+            }
+            edge from parent node [right] {\texttt{t}}
+        }
+        ;
+\end{tikzpicture}
+\end{document}
