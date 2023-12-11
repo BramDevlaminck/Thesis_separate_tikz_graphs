@@ -3,8 +3,8 @@
 \begin{document}
 \begin{tikzpicture}
     [
-        level 1/.style = {sibling distance = 5cm, level distance = 2.3cm},
-        level 2/.style = {sibling distance = 1.5cm, level distance = 2.3cm}
+        level 1/.style = {sibling distance = 4cm, level distance = 2cm},
+        level 2/.style = {sibling distance = 1.5cm, level distance = 2cm}
     ]
 
         \node[draw, circle] {}
@@ -20,7 +20,7 @@
             node[draw, circle] {}
             child {
                 node[draw, rounded corners] {\texttt{0}}
-                edge from parent node [left] {\texttt{acgt\#act\$}}
+                edge from parent node [left, yshift=20pt, xshift=10pt, rotate=53] {\texttt{acgt\#act\$}}
             }
             child {
                 node[draw, rounded corners] {\texttt{0}}
@@ -28,7 +28,7 @@
             }
             child {
                 node[draw, rounded corners] {\texttt{1}}
-                edge from parent node [right] {\texttt{t\$}}
+                edge from parent node [right, yshift=10pt, xshift=0pt, rotate=-53] {\texttt{t\$}}
             }
             edge from parent node [below] {\texttt{ac}}
         }
@@ -36,7 +36,7 @@
             node[draw, circle] {}
             child {
                 node[draw, rounded corners] {\texttt{0}}
-                edge from parent node [left] {\texttt{acgt\#act\$}}
+                edge from parent node [left, yshift=20pt, xshift=10pt, rotate=53] {\texttt{acgt\#act\$}}
             }
             child {
                 node[draw, rounded corners] {\texttt{0}}
@@ -44,7 +44,7 @@
             }
             child {
                 node[draw, rounded corners] {\texttt{1}}
-                edge from parent node [right] {\texttt{t\$}}
+                edge from parent node [right, yshift=10pt, xshift=0pt, rotate=-53] {\texttt{t\$}}
             }
             edge from parent node [right] {\texttt{c}}
         }
@@ -62,7 +62,7 @@
                 node[draw, rounded corners] {\texttt{1}}
                 edge from parent node [right] {\texttt{\$}}
             }
-            edge from parent node [right] {\texttt{t}}
+            edge from parent node [right, xshift=15pt] {\texttt{t}}
         }
         ;
 \end{tikzpicture}
